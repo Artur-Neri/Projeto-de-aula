@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <script src="https://kit.fontawesome.com/182cdb7d61.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        hr {
+            display: none;
+        }
+
+        body {
+            font-family: "Kode Mono", monospace;
+
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #EEF5FF;
+
+            color: white;
+        }
+
+        ::selection{
+            color: #1B1A55;
+            background-color: #535C91;
+        }
+
+        .profile-picture {
+            width: 50px;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        main {
+            background-color: #070F2B;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 25px;
+            border-radius: 25px;
+
+            position: relative;
+        }
+
+        #devIcon {
+            position: absolute;
+            top: 15px;
+            left: 100px;
+
+            transform: rotate(-45deg);
+
+            animation: devMove 4s infinite;
+        }
+
+        #htmlIcon {
+            position: absolute;
+            top: 28px;
+            right: 100px;
+
+            transform: rotate(30deg);
+
+            animation: htmlMove 7s infinite;
+        }
+
+        #cssIcon {
+            position: absolute;
+            top: 35px;
+            right: 230px;
+
+            animation: cssIcon 8s infinite;
+        }
+
+        #tagIcon {
+            position: absolute;
+            top: 50px;
+            right: 423px;
+
+            animation: cssIcon 6s infinite;
+        }
+
+        h1 span{
+            color: #535C91;
+        }
+
+        @keyframes htmlMove {
+            from {
+                top: -20px;
+                transform: rotate(30deg);
+            }
+            to {    
+                top: 500px;
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes devMove {
+            from {
+                top: -10px;
+                transform: rotate(30deg);
+            }
+            to {
+                top: 510px;
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes cssIcon {
+            from {
+                top: -12px;
+                transform: rotate(30deg);
+            }
+            to {
+                top: 595px;
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes tagIcon {
+            from {
+                top: -15px;
+                transform: rotate(30deg);
+            }
+            to {
+                top: 500px;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <a href="https://github.com/Artur-Neri" target="_blank"><img class="profile-picture" src="https://github.com/Artur-Neri.png" alt="foto do Artur"></a>
+        <h1> <span>Aluno:</span> Artur de Souza Neri</h1>
+        <h2>Primeira aula de HTML</h2>
+        <p>Aprendendo a estrutura do HTML</p>
+        <p>Introdução ao Desenvolvimento<br>Front-End</p>
+        <hr>
+        <i class="fa-brands fa-dev" id="devIcon"></i>
+        <i class="fa-brands fa-html5" id="htmlIcon"></i>
+        <i class="fa-brands fa-css3-alt" id="cssIcon"></i>
+        <i class="fa-solid fa-code" id="tagIcon"></i>
+        <div class="galeria">
+            <img src="https://picsum.photos/200/200" alt="uma imagem aleatória"> 
+            <img src="https://picsum.photos/201/201" alt="uma imagem aleatória"> 
+        </div>
+    </main>
+</body>
+</html>
